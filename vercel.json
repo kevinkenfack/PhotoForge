@@ -1,15 +1,8 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      { "src": "/assets/(.*)", "dest": "/assets/$1" },
-      { "src": "/dist/(.*)", "dest": "/dist/$1" },
-      { "src": "/(.*)", "dest": "/index.html" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [{ "src": "index.html", "use": "@vercel/static" }],
+  "routes": [
+    { "handle": "@vercel/static", "src": "/dist/(.*)", "dest": "/dist/$1" },
+    { "handle": "@vercel/static", "src": "/assets/(.*)", "dest": "/assets/$1" }
+  ]
+}
