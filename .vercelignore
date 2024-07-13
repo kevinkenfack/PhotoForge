@@ -1,0 +1,7 @@
+.vite/
+dist/
+src/
+package.json
+tsconfig.json
+vite.config.js
+*.config.js

@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      { "src": "/assets/(.*)", "dest": "/assets/$1" },
+      { "src": "/dist/(.*)", "dest": "/dist/$1" },
+      { "src": "/(.*)", "dest": "/index.html" }
+    ],
+    "ignore": [
+      ".eslintrc.json",
+      ".gitignore",
+      ".vercelignore",
+      "lang.json",
+      "postcss.config.js",
+      "start.html",
+      "tailwind.config.js",
+      "tsconfig.json",
+      "tsconfig.node.json",
+      "vite.config.ts"
+    ]
+  }
+  
